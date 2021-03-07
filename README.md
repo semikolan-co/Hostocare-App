@@ -1,5 +1,5 @@
 # Hostocare-App
-An application where you can search, compare and review hospital, clinics, medical store etc.
+## An application where you can search, compare and review Hospitals, Clinics, Medical stores etc.
 
 We have been working  to create a proper platform in which the user can check and compare the availability of hospitals in their locality. 
 Through the app and web interface, the user can compare the different hospitals, medical shops, Clinics  nearby and their specifications
