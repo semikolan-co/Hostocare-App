@@ -1,17 +1,6 @@
 import 'package:flutter/material.dart';
- 
-void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
-  ));
-}
- 
-class MyApp extends StatefulWidget {
-  @override
-  _State createState() => _State();
-}
- 
-class _State extends State<MyApp> {
+
+class SubPage extends StatelessWidget {
   TextEditingController nameController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
  
@@ -19,7 +8,8 @@ class _State extends State<MyApp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('HOSTOCARE'),
+          title: Text('Login'),
+          backgroundColor: Color.fromRGBO(15, 48, 87, 1),
         ),
         body: Padding(
             padding: EdgeInsets.all(10),
@@ -29,9 +19,9 @@ class _State extends State<MyApp> {
                     alignment: Alignment.center,
                     padding: EdgeInsets.all(10),
                     child: Text(
-                      'WELCOME TO HOSTOCARE',
+                      'HOSTOCARE',
                       style: TextStyle(
-                          color: Colors.blue,
+                          color: Color.fromRGBO(0, 88, 122,1),
                           fontWeight: FontWeight.w500,
                           fontSize: 30),
                     )),
@@ -67,7 +57,7 @@ class _State extends State<MyApp> {
                   onPressed: (){
                     //forgot password screen
                   },
-                  textColor: Colors.blue,
+                  textColor: Color.fromRGBO(0, 88, 122,1),
                   child: Text('Forgot Password'),
                 ),
                 Container(
@@ -75,11 +65,12 @@ class _State extends State<MyApp> {
                     padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
                     child: RaisedButton(
                       textColor: Colors.white,
-                      color: Colors.blue,
+                      color: Color.fromRGBO(0, 88, 122,1),
                       child: Text('Login'),
                       onPressed: () {
                         print(nameController.text);
                         print(passwordController.text);
+                        Navigator.pop(context);
                       },
                     )),
                 Container(
@@ -87,7 +78,7 @@ class _State extends State<MyApp> {
                     children: <Widget>[
                       Text('Dont have account?'),
                       FlatButton(
-                        textColor: Colors.blue,
+                        textColor: Color.fromRGBO(0, 88, 122,1),
                         child: Text(
                           'Register',
                           style: TextStyle(fontSize: 20),
@@ -103,3 +94,36 @@ class _State extends State<MyApp> {
             )));
   }
 }
+
+
+/*class SubPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Sub Page'),
+        backgroundColor: Colors.redAccent,
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Text('Click button to back to Main Page'),
+            RaisedButton(
+              textColor: Colors.white,
+              color: Colors.redAccent,
+              child: Text('Back to Main Page'),
+              onPressed: () {
+                backToMainPage(context);
+              },
+            )
+          ],
+        ),
+      ),
+    );
+  }
+
+  void backToMainPage(context) {
+    Navigator.pop(context);
+  }
+}*/

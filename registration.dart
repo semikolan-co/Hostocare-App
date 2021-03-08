@@ -1,21 +1,23 @@
-
-
 import 'package:flutter/material.dart';
-void main() => runApp(MyApp());
-class MyApp extends StatefulWidget {
-  static const String _title = 'Registration Page';
+
+class MyRegPage extends StatefulWidget {
   @override
-  _MyAppState createState() => _MyAppState();
+  _MyRegPageState createState() => _MyRegPageState();
 }
-class _MyAppState extends State<MyApp> {
+
+class _MyRegPageState extends State<MyRegPage> {
   int selectedGender = 0;
+
   void _handleRadioValueChange1(int value) =>
-      setState(() => selectedGender = value);
+     setState(() => selectedGender = value);
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: MyApp._title,
-      home: Scaffold(
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('Register'),
+          backgroundColor: Color.fromRGBO(15, 48, 87, 1),
+        ),
         body: Padding(
           padding: const EdgeInsets.all(12.0),
           child: Column(
@@ -185,7 +187,9 @@ class _MyAppState extends State<MyApp> {
               width: 250,
               child: RaisedButton(
                 color: Colors.black,
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pop(context);
+                },
                 child: Text(
                   "Register Now",
                   style: TextStyle(fontSize: 20.0, color: Colors.white),
@@ -194,8 +198,6 @@ class _MyAppState extends State<MyApp> {
             ),
           ]),
         ),
-      ),
-    );
+      );
   }
 }
-

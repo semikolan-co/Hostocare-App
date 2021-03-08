@@ -1,17 +1,11 @@
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(MaterialApp(
-    home: MyApp(),
-  ));
-}
-
-class MyApp extends StatefulWidget {
+class HospitalPage extends StatefulWidget {
   @override
   _State createState() => _State();
 }
 
-class _State extends State<MyApp> {
+class _State extends State<HospitalPage> {
   final List<String> names = <String>['AIIMS, All India Institute of Medical Sciences', 'Fortis Hospital, Kolkata', 'Indraprastha Apollo Hospital', 'Lilavati Hospital, Mumba', 'Christian Medical College, Vellore', 'Care Hospital, Banjara', 'Cook', 'Carline'];
   final List<int> msgCount = <int>[2, 0, 10, 6, 52, 4, 0, 2];
 
