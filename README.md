@@ -7,7 +7,8 @@ such as  the availability of beds and doctors. The user can also check the medic
 the time in which the doctor is available in a particular hospital or clinic.
 ## The goal of our platform is to make healthcare accessible to all at their fingertips. 
 
-### This Application will be available on different Platforms including Android App Store and iOS App Store as well as a Web Application for PC/Desktop & Mobiles. The website can be found at [this github repo](https://github.com/very-good-team/hostocare).
+### This Application will be available on different Platforms including Android App Store and iOS App Store as well as a Web Application for PC/Desktop & Mobiles. 
+The website can be found at [this github repo](https://github.com/very-good-team/hostocare).
 
 
 
