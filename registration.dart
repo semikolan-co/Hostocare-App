@@ -23,22 +23,18 @@ class _MyRegPageState extends State<MyRegPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-            SizedBox(height: 70),
+            SizedBox(height: 10),
+            ClipRRect(
+               borderRadius: BorderRadius.circular(100.0),
+               child:
+                   Image.asset('../images/logo.png', height: 150),
+             ),
             Text("New Register",
                 style: TextStyle(
                   fontSize: 28.0,
                   fontWeight: FontWeight.bold,
                 )),
             SizedBox(height: 30),
-
-
-             ClipRRect(
-               borderRadius: BorderRadius.circular(100.0),
-               child:
-                   Image.asset('logo.png', height: 150),
-             ),
-            
-            SizedBox(height: 20),
             Container(
               width: double.maxFinite,
               child: Row(
@@ -135,7 +131,8 @@ class _MyRegPageState extends State<MyRegPage> {
                   obscureText: false,
                   decoration: InputDecoration(
                     border: InputBorder.none,
-                    hintText: "Enter Email Id",
+                    prefixIcon: Icon(Icons.email),
+                    hintText: "Email Id",
                   ),
                 ),
               ),
@@ -156,6 +153,7 @@ class _MyRegPageState extends State<MyRegPage> {
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: "Password",
+                    prefixIcon: Icon(Icons.vpn_key),
                   ),
                 ),
               ),
@@ -176,6 +174,7 @@ class _MyRegPageState extends State<MyRegPage> {
                   decoration: InputDecoration(
                     border: InputBorder.none,
                     hintText: "Retype Password",
+                    prefixIcon: Icon(Icons.vpn_key),
                   ),
                 ),
               ),
@@ -186,7 +185,7 @@ class _MyRegPageState extends State<MyRegPage> {
             Container(
               width: 250,
               child: RaisedButton(
-                color: Colors.black,
+                color: Color.fromRGBO(0, 88, 122,1),
                 onPressed: () {
                   Navigator.pop(context);
                 },

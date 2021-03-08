@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:web_app/registration.dart';
 
 class SubPage extends StatelessWidget {
   TextEditingController nameController = TextEditingController();
@@ -15,6 +16,13 @@ class SubPage extends StatelessWidget {
             padding: EdgeInsets.all(10),
             child: ListView(
               children: <Widget>[
+                Container(alignment: Alignment.center,
+                    padding: EdgeInsets.all(10),
+                    child: new Image.asset('../images/logo.png',
+                      width: 150,
+                      height: 150,
+                      )
+                ,),
                 Container(
                     alignment: Alignment.center,
                     padding: EdgeInsets.all(10),
@@ -32,6 +40,7 @@ class SubPage extends StatelessWidget {
                       'Sign in',
                       style: TextStyle(fontSize: 20),
                     )),
+                    
                 Container(
                   padding: EdgeInsets.all(10),
                   child: TextField(

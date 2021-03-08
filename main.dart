@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:web_app/hospitalpage.dart';
 import 'package:web_app/login.dart';
 import 'package:web_app/registration.dart';
+import 'package:web_app/drawer.dart';
+
+import 'navbar.dart';
 void main() {
   runApp(new MaterialApp(
     home: new MyApp(),
@@ -39,7 +42,9 @@ class _State extends State<MyApp> {
             )
         ],
       ),
+      drawer: NavDrawerExample(),
       body: new Container(
+        color: Color.fromRGBO(0, 0, 0, 0.6),
         padding: new EdgeInsets.all(32.0),
         child: new Center(
           child: new Column(
@@ -49,6 +54,7 @@ class _State extends State<MyApp> {
           ),
         )
       ),
+      bottomNavigationBar: BottomNavBar(),
     );
   }
 }
