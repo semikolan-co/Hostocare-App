@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:web_app/registration.dart';
+import 'package:Hostocare/registration.dart';
 
 class SubPage extends StatelessWidget {
   TextEditingController nameController = TextEditingController();

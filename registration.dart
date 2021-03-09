@@ -5,7 +5,7 @@ class MyRegPage extends StatefulWidget {
   _MyRegPageState createState() => _MyRegPageState();
 }
 
-class _MyRegPageState extends State<MyRegPage> {
+/*class _MyRegPageState extends State<MyRegPage> {
   int selectedGender = 0;
 
   void _handleRadioValueChange1(int value) =>
@@ -198,5 +198,265 @@ class _MyRegPageState extends State<MyRegPage> {
           ]),
         ),
       );
+  }
+}
+
+
+class MyApp extends StatefulWidget {
+  static const String _title = 'Registration Page';
+  @override
+  _MyAppState createState() => _MyAppState();
+}*/
+
+class _MyRegPageState extends State<MyRegPage> {
+  int selectedGender = 0;
+  void _handleRadioValueChange1(int value) =>
+      setState(() => selectedGender = value);
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Register'),
+          leading: new IconButton(
+                      icon: new Icon(Icons.arrow_back, color: Colors.white),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
+          backgroundColor: Color.fromRGBO(15, 48, 87, 1),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(10),
+          child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+            SizedBox(height: 30),
+            ClipRRect(
+               borderRadius: BorderRadius.circular(100.0),
+               child:
+                   Image.asset('../images/logo.png', height: 150),
+             ),
+            Text("Hostocare",
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.blue,
+                  fontWeight: FontWeight.bold,
+                )),
+
+            Text("New Register",
+                style: TextStyle(
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                )),
+            SizedBox(height: 30),
+
+            // ClipRRect(
+            //   borderRadius: BorderRadius.circular(100.0),
+            //   child:
+            //       Image.asset('logo.png', height: 150),
+            // ),
+
+            SizedBox(height: 20),
+            Container(
+              width: double.maxFinite,
+              child: Row(
+                children: <Widget>[
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.55),
+                              blurRadius: 10,
+                              offset: Offset(2.0, 5.0))
+                        ],
+                        color: Colors.grey[100],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: TextField(
+                          style: TextStyle(fontSize: 20.0, color: Colors.black),
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "First Name",
+                            // fillColor: Colors.green
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 10),
+                  Flexible(
+                    flex: 1,
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10.0),
+                        boxShadow: [
+                          BoxShadow(
+                              color: Color.fromRGBO(0, 0, 0, 0.55),
+                              blurRadius: 10,
+                              offset: Offset(2.0, 5.0))
+                        ],
+                        color: Colors.grey[100],
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                        child: TextField(
+                          style: TextStyle(fontSize: 20.0, color: Colors.black),
+                          obscureText: false,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: "Last Name",
+                            // fillColor: Colors.green
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Text("Select Gender",
+                style: TextStyle(fontSize: 16.0, color: Colors.black)),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Radio(
+                  activeColor: Colors.black,
+                  value: 0,
+                  groupValue: selectedGender,
+                  onChanged: _handleRadioValueChange1,
+                ),
+                Text(
+                  'Male',
+                  style: TextStyle(fontSize: 16.0, color: Colors.black),
+                ),
+                Radio(
+                  activeColor: Colors.black,
+                  value: 1,
+                  groupValue: selectedGender,
+                  onChanged: _handleRadioValueChange1,
+                ),
+                Text(
+                  'Female',
+                  style: new TextStyle(fontSize: 16.0, color: Colors.black),
+                ),
+                Radio(
+                  activeColor: Colors.black,
+                  value: 2,
+                  groupValue: selectedGender,
+                  onChanged: _handleRadioValueChange1,
+                ),
+                Text(
+                  'Others',
+                  style: new TextStyle(fontSize: 16.0, color: Colors.black),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                boxShadow: [
+                  BoxShadow(
+                      color: Color.fromRGBO(0, 0, 0, 0.55),
+                      blurRadius: 10,
+                      offset: Offset(2.0, 5.0))
+                ],
+                color: Colors.grey[100],
+              ),
+              // child:Icon(Icons.mail),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: TextField(
+                  style: TextStyle(fontSize: 20.0, color: Colors.black),
+                  obscureText: false,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    prefixIcon: Icon(Icons.email),
+                    hintText: "Email Id",
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                boxShadow:[
+               BoxShadow(
+                 color: Color.fromRGBO(0, 0, 0, 0.55),
+                 blurRadius: 10,
+                 offset: Offset(2.0,5.0)
+               )
+               ],
+                color: Colors.grey[100],
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: TextField(
+                  style: TextStyle(fontSize: 20.0, color: Colors.black),
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Password",
+                    prefixIcon: Icon(Icons.vpn_key),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10.0),
+                boxShadow:[
+               BoxShadow(
+                 color: Color.fromRGBO(0, 0, 0, 0.55),
+                 blurRadius: 10,
+                 offset: Offset(2.0,5.0)
+               )
+               ],
+                color: Colors.grey[100],
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10.0),
+                child: TextField(
+                  style: TextStyle(fontSize: 20.0, color: Colors.black),
+                  obscureText: true,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Retype Password",
+                    prefixIcon: Icon(Icons.vpn_key),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Container(
+              width: 250,
+              child: RaisedButton(
+                color: Color.fromRGBO(0, 0, 0, 0.55),
+                onPressed: () {},
+                child: Text(
+                  "Register Now",
+                  style: TextStyle(fontSize: 20.0, color: Colors.white),
+                ),
+              ),
+            ),
+          ]),
+        ),
+      ),
+    );
   }
 }
