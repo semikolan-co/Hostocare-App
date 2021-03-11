@@ -58,7 +58,7 @@ class _State extends State<MapPage> {
 
     @override
   Widget build(BuildContext context) {
-       final String token = 'sk.eyJ1IjoiYW5rdXJnMTMyIiwiYSI6ImNrbTNwdG5obzR6OHcydm4xdThrc2JlaHcifQ.OG79p11A6C5nw4KshMrVKw';
+       final String token = 'add your token here';
        final String style = 'mapbox://styles/ankurg132/ckm3tgkuscgr717qk5fm789nv';
        Future<LatLng> varfuture = acquireCurrentLocation();
        print("Hello");
