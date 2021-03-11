@@ -1,6 +1,103 @@
+import 'package:fancy_drawer/fancy_drawer.dart';
 import 'package:flutter/material.dart';
 
-class NavDrawerExample extends StatelessWidget {
+
+class NavDrawerExample extends StatefulWidget {
+  NavDrawerExample({Key key}) : super(key: key);
+
+  @override
+  _HomeScreenState createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<NavDrawerExample>
+    with SingleTickerProviderStateMixin {
+  FancyDrawerController _controller;
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = FancyDrawerController(
+        vsync: this, duration: Duration(milliseconds: 250))
+      ..addListener(() {
+        setState(() {});
+      });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Drawer(
+      child: FancyDrawerWrapper(
+        backgroundColor: Colors.white,
+        controller: _controller,
+        drawerItems: <Widget>[
+          Text(
+            "Go to home",
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.purple.shade700,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            "About us",
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.purple.shade700,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            "Our products",
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.purple.shade700,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            "Support us",
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.purple.shade700,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            "Log out",
+            style: TextStyle(
+              fontSize: 18,
+              color: Colors.purple.shade700,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ], 
+        child: Scaffold(
+          appBar: AppBar(
+            leading: IconButton(
+              icon: Icon(
+                Icons.menu,
+                color: Colors.black,
+              ),
+              onPressed: () {
+                _controller.toggle();
+              },
+            ),
+          ),
+          //body: Center(
+          //  child: Text("Body"),
+          //),
+        ),
+      ),
+    );
+}
+}
+/*class NavDrawerExample extends StatelessWidget {
   const NavDrawerExample({Key key}) : super(key: key);
 
   @override
@@ -10,7 +107,7 @@ class NavDrawerExample extends StatelessWidget {
       accountEmail: Text('user.name@email.com'),
       currentAccountPicture: ClipRRect(
         borderRadius: BorderRadius.circular(100.0),
-        child: new Image.asset('../images/logo.png'),
+        child: new Image.asset('assets/images/logo.png'),
       ),
       otherAccountsPictures: <Widget>[
         CircleAvatar(
@@ -64,4 +161,4 @@ class _NewPage extends MaterialPageRoute<Null> {
             ),
           );
         });
-}
+}*/

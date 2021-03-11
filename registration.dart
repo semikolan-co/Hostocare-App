@@ -226,12 +226,13 @@ class _MyRegPageState extends State<MyRegPage> {
         ),
         body: Padding(
           padding: const EdgeInsets.all(10),
-          child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+          child: SingleChildScrollView
+          (child: Column(mainAxisAlignment: MainAxisAlignment.start, children: [
             SizedBox(height: 30),
             ClipRRect(
                borderRadius: BorderRadius.circular(100.0),
                child:
-                   Image.asset('../images/logo.png', height: 150),
+                   Image.asset('assets/images/logo.png', height: 150),
              ),
             Text("Hostocare",
                 style: TextStyle(
@@ -456,6 +457,7 @@ class _MyRegPageState extends State<MyRegPage> {
             ),
           ]),
         ),
+      ),
       ),
     );
   }

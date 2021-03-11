@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:Hostocare/registration.dart';
+import 'package:hostocare/registration.dart';
 
 class SubPage extends StatelessWidget {
   TextEditingController nameController = TextEditingController();
@@ -18,7 +18,7 @@ class SubPage extends StatelessWidget {
               children: <Widget>[
                 Container(alignment: Alignment.center,
                     padding: EdgeInsets.all(10),
-                    child: new Image.asset('../images/logo.png',
+                    child: new Image.asset('assets/images/logo.png',
                       width: 150,
                       height: 150,
                       )
