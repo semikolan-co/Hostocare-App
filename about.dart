@@ -13,24 +13,6 @@ class AboutPage extends StatefulWidget {
 class _State extends State<AboutPage>{
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: Colors.green),
-      home: MyHomePage(),
-    );
-  }
-
-  
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
     final List<String> titles = [
       "Team Rocket",
       "Harsh Vishwkarma",
