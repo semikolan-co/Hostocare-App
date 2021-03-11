@@ -1,4 +1,5 @@
-![logo](https://user-images.githubusercontent.com/73766765/110751723-1be89800-81f9-11eb-985c-4c8d5d029446.png)
+![logo](https://user-images.githubusercontent.com/73766765/110752076-9fa28480-81f9-11eb-8a27-000d833cbf54.jpg)
+
 
 
 # Hostocare-App
