@@ -45,3 +45,10 @@ Hostocare services make this possible . Hostocare can be used for emergency case
 ## Supporting Devices
 
 This Application will be available on different Platforms including Android App Store and iOS App Store as well as a Web Application for PC/Desktop & Mobiles.
+
+## Screenshots
+<img src="https://raw.githubusercontent.com/very-good-team/Hostocare-App/main/hostocare%20(1).jpeg">
+<img src="https://raw.githubusercontent.com/very-good-team/Hostocare-App/main/hostocare%20(2).jpeg">
+<img src="https://raw.githubusercontent.com/very-good-team/Hostocare-App/main/hostocare%20(3).jpeg">
+<img src="https://raw.githubusercontent.com/very-good-team/Hostocare-App/main/hostocare%20(4).jpeg">
+<img src="https://raw.githubusercontent.com/very-good-team/Hostocare-App/main/hostocare%20(5).jpeg">
