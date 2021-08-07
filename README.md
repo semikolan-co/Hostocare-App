@@ -14,7 +14,7 @@ We have been working to create a proper platform in which the user can check and
 **
 The goal of our platform is to make healthcare accessible to all at their fingertips.**
 
-## Targeting Audience & Conditions
+## Targeting Audience & Conditions  
 
 In our country there are no better facilities for medication in rural areas or small towns so people tend to visit big cities and they don't have much information about which medical expert they should visit or which hospital provides better treatment. So we will try to target specially these types of people.
 
@@ -30,7 +30,7 @@ To provide :
     
 -   Medical stores near you and medicines available there.
     
--   Medical labs and tests they provide and instruments they have .
+-   Medical labs and tests they provide and instruments they have .   
     
 
 In the emergency case there will be a direct button for Ambulance if you are away from a medical facility.
